@@ -101,7 +101,7 @@ let onigiri = [
 let classification = localStorage.getItem("classification"); //種別
 let file_path = localStorage.getItem("file_path"); //フォルダへのパス
 
-
+$.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",console.log(json))
 // データを選別
 if (classification=="カレー"){
     $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",function(json){
