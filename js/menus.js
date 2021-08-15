@@ -104,10 +104,8 @@ var data = ""
 
 // データを選別
 if (classification=="カレー"){
-    data = curry;
     $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",getFunc)
 }else if (classification=="おにぎり"){
-    data = onigiri;
     $.getJSON("https://lukiw928.github.io/momokara/menus/onigiri.json",getFunc)
 }
 
