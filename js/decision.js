@@ -117,10 +117,12 @@ $(document).ready(function(){
     // 焼き鳥のみ初期値は2に設定
     if (data.name=="焼き鳥"){
         localStorage.setItem("cnt",2)
-        $("#count").html(2)
+        $("#howMuch").html("¥300");
+        $("#count").html(2);
     }else{
         localStorage.setItem("cnt",1)
-        $("#count").html(1)
+        $("#count").html(1);
+        $("#howMuch").html("¥"+total);
     }
 })
 
