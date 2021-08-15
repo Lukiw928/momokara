@@ -100,13 +100,23 @@
 
 let classification = localStorage.getItem("classification"); //種別
 let file_path = localStorage.getItem("file_path"); //フォルダへのパス
-var data = ""
+var itemData = ""
 
 // データを選別
 if (classification=="カレー"){
-    $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",getFunc)
+    $.ajax({type: "GET", url: "https://lukiw928.github.io/momokara/menus/curry.json",async: false, success: function(data){
+        data = data.param;
+        itemData = data.menu;
+        }
+    });
+//     $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",getFunc)
 }else if (classification=="おにぎり"){
-    $.getJSON("https://lukiw928.github.io/momokara/menus/onigiri.json",getFunc)
+//     $.getJSON("https://lukiw928.github.io/momokara/menus/onigiri.json",getFunc)
+    $.ajax({type: "GET", url: "https://lukiw928.github.io/momokara/menus/onigiri.json",async: false, success: function(data){
+        data = data.param;
+        itemData = data.menu;
+        }
+    });
 }
 
 // 画像を追加
@@ -116,7 +126,7 @@ var Img = "<img src='img/cooking/"+file_path+"/0.png'>";
 var res = "<ul class='item_list'>";
 
 // 種別によって戻る画面を変更
-for (var i=0; i<data.length; i++){
+for (var i=0; i<itemData.length; i++){
     res += "<li class='item' id=" + i + " onclick='clicked(this.id)';>";
     if (classification=="おにぎり"){
         res += "<a href='details.html'></a>"
@@ -124,7 +134,7 @@ for (var i=0; i<data.length; i++){
         res += "<a href='decision.html'></a>"
     }
     res += "<div class='item_title'>";
-    res += "<h2>"+data[i]["name"]+"</h2>";
+    res += "<h2>"+itemData[i]["name"]+"</h2>";
     res += "</div>";
     res += "</li>";
 }
@@ -144,20 +154,15 @@ function clicked(getId){
     transmit = []
     transmit.push(menu)
     localStorage.setItem("summary",JSON.stringify(transmit))
-    for (var i=0; i<data.length; i++){
-        if (data[i].name == menu){
-            localStorage.setItem("item_data",JSON.stringify(data[i]));
-            localStorage.setItem("total",data[i]["price"])
+    for (var i=0; i<itemData.length; i++){
+        if (itemData[i].name == menu){
+            localStorage.setItem("item_data",JSON.stringify(itemData[i]));
+            localStorage.setItem("total",itemData[i]["price"])
             localStorage.setItem("menu_name","具を選択")
             break;
         }
     }
 }
 
-function getFunc(getData){
-    data = getData.menu
-    console.log(data)
-}
-
 // debug
-console.log(data)
+console.log(itemData)
