@@ -63,7 +63,7 @@ for (var i=0; i < itemData.length; i++){
     res += "</li>";
 }
 res += "</ul>"
-console.log(res)
+// console.log(res)
 
 //ヘッダーに種別を表示する
 $(document).ready(function(){
