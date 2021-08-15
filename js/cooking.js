@@ -102,4 +102,4 @@ function clicked(getId) {
 // console.log(classification)
 // // console.log(res)
 // // console.log(tes)
-// console.log(itemData)
+console.log(itemData)
