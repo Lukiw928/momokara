@@ -100,17 +100,18 @@ let onigiri = [
 
 let classification = localStorage.getItem("classification"); //種別
 let file_path = localStorage.getItem("file_path"); //フォルダへのパス
+var data = ""
 
-$.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",console.log(json))
+$.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",getFunc)
 // データを選別
 if (classification=="カレー"){
-    var data = curry;
+    data = curry;
 //     $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",function(json){
 // //         var data = JSON.parse(json.menu)
 //         console.log(json)
 //     });
 }else if (classification=="おにぎり"){
-    var data = onigiri;
+    data = onigiri;
 }
 
 // 画像を追加
@@ -156,6 +157,11 @@ function clicked(getId){
             break;
         }
     }
+}
+
+function getFunc(getData){
+    data = getData
+    console.log(data)
 }
 
 // debug
