@@ -105,7 +105,6 @@ var itemData = ""
 // データを選別
 if (classification=="カレー"){
     $.ajax({type: "GET", url: "https://lukiw928.github.io/momokara/menus/curry.json",async: false, success: function(data){
-        data = data.param;
         itemData = data.menu;
         }
     });
@@ -113,7 +112,6 @@ if (classification=="カレー"){
 }else if (classification=="おにぎり"){
 //     $.getJSON("https://lukiw928.github.io/momokara/menus/onigiri.json",getFunc)
     $.ajax({type: "GET", url: "https://lukiw928.github.io/momokara/menus/onigiri.json",async: false, success: function(data){
-        data = data.param;
         itemData = data.menu;
         }
     });
