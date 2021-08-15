@@ -106,12 +106,10 @@ $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",getFunc)
 // データを選別
 if (classification=="カレー"){
     data = curry;
-//     $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",function(json){
-// //         var data = JSON.parse(json.menu)
-//         console.log(json)
-//     });
+    $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",getFunc)
 }else if (classification=="おにぎり"){
     data = onigiri;
+    $.getJSON("https://lukiw928.github.io/momokara/menus/onigiri.json",getFunc)
 }
 
 // 画像を追加
