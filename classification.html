@@ -1,0 +1,129 @@
+<!-- 種別選択をする画面 -->
+
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <Title>ももからこーたろー 簡単会計アプリ</Title>
+    <link rel="stylesheet" href="css/html5reset-1.6.1.css">
+    <link rel="stylesheet" href="css/classification.css">
+    <script src="js/classification.js"></script>
+</head>
+
+<body>
+
+    <header>
+        <h1>種別を選択</h1>
+        <a class="to_first_screen" href="index.html#guide_screen">使い方を見る</a>
+        <div class="order_form">
+            <div class="order_cnt hidden">
+                <span id="js_order_cnt"></span>
+            </div>
+            <a class="order_form_icon" href="order_form.html">
+                <img src="img/icon/order_form.png" alt="">
+            </a>
+        </div>
+    </header>
+
+    <div id="wrapper">
+        <div class="item_wrapper">
+            <ul class="item_list">
+
+                <!-- 弁当について -->
+                <li class="item" id="0" onclick="clicked(this.id)">
+                    <a href="cooking.html"></a>
+                    <div class="item_img">
+                        <img src="img/icon/takeaway_lunch.png" alt="">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>弁当</h2></div>
+                    </div>
+                </li>
+
+                <!-- 丼について -->
+                <li class="item" id = "1" onclick="clicked(this.id)">
+                    <a href="cooking.html"></a>
+                    <div class="item_img">
+                        <img src="img/icon/donburi.png" alt="">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title" id="1"><h2>丼</h2></div>
+                    </div>
+                </li>
+
+                <!-- カレーについて -->
+                <li class="item" id="2" onclick="clicked(this.id)">
+                    <a href="menus.html"></a>
+                    <div class="item_img">
+                        <img src="img/icon/curry.png" alt="">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>カレー</h2></div>
+                    </div>
+                </li>
+
+                <!-- おにぎりについて -->
+                <li class="item" id="3" onclick="clicked(this.id)">
+                    <a href="menus.html"></a>
+                    <div class="item_img">
+                        <img src="img/icon/onigiri.png" alt="">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>おにぎり</h2></div>
+                    </div>
+                </li>
+
+                <!-- 単品唐揚げについて -->
+                <li class="item" id="4" onclick="clicked(this.id)">
+                    <a href="cooking.html"></a>
+                    <div class="item_img">
+                        <img src="img/icon/chicken.png" alt="">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>単品唐揚げ</h2></div>
+                    </div>
+                </li>
+
+                <!-- 単品揚げ物について -->
+                <li class="item" id="5" onclick="clicked(this.id)">
+                    <a href="cooking.html"></a>
+                    <div class="item_img">
+                        <img src="img/icon/yakitori.png" alt="">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>単品揚げ物</h2></div>
+                    </div>
+                </li>
+
+                <!-- その他単品について -->
+                <li class="item" id="6" onclick="clicked(this.id)">
+                    <a href="cooking.html"></a>
+                    <div class="item_img">
+                        <img src="img/icon/taiyaki.png" alt="">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>その他単品</h2></div>
+                    </div>
+                </li>
+
+                <!-- お飲み物について -->
+                <li class="item" id="7" onclick="clicked(this.id)">
+                    <a href="cooking.html"></a>
+                    <div class="item_img">
+                        <img src="img/icon/drink.png" alt="">
+                    </div>
+                    <div class="item_textbox">
+                        <div class="item_title"><h2>お飲み物</h2></div>
+                    </div>
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+
+</body>
+
+</html>

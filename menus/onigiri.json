@@ -1,0 +1,24 @@
+{
+    "menu":[
+        {
+            "name":"Aセット",
+            "price":430,
+            "description":"元祖S(100g)・おにぎり1個"
+        },
+        {
+            "name":"Bセット",
+            "price":480,
+            "description":"元祖M(130g)・おにぎり1個"
+        },
+        {
+            "name":"Cセット",
+            "price":610,
+            "description":"元祖M(130g)・おにぎり2個"
+        },
+        {
+            "name":"Dセット",
+            "price":700,
+            "description":"元祖L(180g)・おにぎり2個"
+        }
+    ]
+}
