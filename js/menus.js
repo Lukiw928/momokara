@@ -98,16 +98,15 @@ let onigiri = [
     }
 ];
 
-// const fs = require('fs');
-
 let classification = localStorage.getItem("classification"); //種別
 let file_path = localStorage.getItem("file_path"); //フォルダへのパス
 
 
 // データを選別
 if (classification=="カレー"){
-    const jsonObject = JSON.parse(fs.readFileSync('/menus/curry.json', 'utf8'));
-    var data = jsonObject.menu;
+    $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",function(json)){
+              var data = json.menu
+              }
 }else if (classification=="おにぎり"){
     var data = onigiri;
 }
