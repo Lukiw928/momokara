@@ -105,8 +105,9 @@ let file_path = localStorage.getItem("file_path"); //フォルダへのパス
 // データを選別
 if (classification=="カレー"){
     $.getJSON("https://lukiw928.github.io/momokara/menus/curry.json",function(json){
-              var data = JSON.parse(json.menu)
-              })
+//         var data = JSON.parse(json.menu)
+        console.log(json)
+    });
 }else if (classification=="おにぎり"){
     var data = onigiri;
 }
