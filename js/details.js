@@ -30,10 +30,9 @@ if (classification=="おにぎり"){
 // body部分
 var res = "";
 
-res += "<div class='container'><ul>";
-
 // 種別がおにぎりの時用の画面
 if (classification=="おにぎり"){
+    res += "<div class='container'><ul>";
     for (var i=0; i<4; i++){
         res += "<li><input type='radio' name='rice_ball' id="+rice_ball[i]+" onclick=add_rice_ball(this.id)><label for="+rice_ball[i]+">"+rice_ball[i]+"</label>";
         res += "<div class='check'></div></li>";
@@ -44,7 +43,9 @@ if (classification=="おにぎり"){
     res += "<div class='item_img'>";
     res += "<img src='img/cooking/"+file_path+"/"+data["image_index"]+".png'>";
     res += "</div>";
-
+    
+    res += "<div class='container'><ul>";
+    
     // サイズを選択してもらうチェックボックス
     for (let [size,price] of Object.entries(data["price"])){
         res += "<li><input type='radio' name='size' id="+size+" onclick=add_size(this.id)><label for="+size+">"+size+" : "+price+" 円</label>";
