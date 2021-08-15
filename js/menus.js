@@ -160,7 +160,7 @@ function clicked(getId){
 }
 
 function getFunc(getData){
-    data = getData
+    data = getData.menu
     console.log(data)
 }
 
