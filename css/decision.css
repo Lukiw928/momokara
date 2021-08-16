@@ -118,3 +118,30 @@ ul li{
 	background: #EC407A;
 	color: #fff;
 }
+
+@media screen and (max-width: 2000px) {
+    .item_image img{
+      width: 40%;
+    }
+    ul {
+        margin:0 20%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .item_image img{
+      width: 60%;
+    }
+    ul {
+        margin:0 10%;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .item_image img{
+      width: 70%;
+    }
+    ul {
+        margin: 0;
+    }
+}
