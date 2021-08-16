@@ -145,3 +145,63 @@ input[type=radio]:checked ~ label ,input[type=checkbox]:checked ~ label{
 	background: #EC407A;
 	color: #fff;
 }
+
+@media screen and (max-width: 2000px) {
+    .item_img img{
+      width: 35%;
+    }
+    ul li label{
+        font-size: 1.5rem;
+        padding: 5px 5px 5px 45%;
+    }
+
+    ul li .check{
+        height: 15px;
+        width: 15px;
+        top: 7px;
+        left: 40%;
+    }
+    .to_next p{
+        padding: 0.8rem 10rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .item_img img{
+      width: 60%;
+    }
+    ul li label{
+        font-size: 1.5rem;
+        padding: 5px 5px 5px 35%;
+    }
+
+    ul li .check{
+        height: 15px;
+        width: 15px;
+        top: 7px;
+        left: 28%;
+    }
+    .to_next p{
+        padding: 0.8rem 7.5rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .item_img img{
+      width: 70%;
+    }
+    ul li label{
+        font-size: 1.2rem;
+        padding: 5px 5px 5px 30%;
+    }
+
+    ul li .check{
+        height: 15px;
+        width: 15px;
+        top: 7px;
+        left: 20%;
+    }
+    .to_next p{
+        padding: 0.8rem 5rem;
+    }
+}
