@@ -44,7 +44,7 @@ if (classification=="おにぎり"){
     res += "<img src='img/cooking/"+file_path+"/"+data["image_index"]+".png'>";
     res += "</div>";
     
-    res += "<div class='container'><ul>";
+    res += "<div class='container'><h2>サイズ</h2><ul>";
     
     // サイズを選択してもらうチェックボックス
     for (let [size,price] of Object.entries(data["price"])){
@@ -56,7 +56,7 @@ res += "</ul>"
 
 // ご飯のサイズを選択してもらうチェックボックス
 if (classification=="弁当" || classification=="丼"){
-    res += "<ul>"
+    res += "<h2>ご飯</h2><ul>"
     for (let [size,price] of Object.entries(rice)){
         if (classification=="丼" && size=="無し"){
             continue
@@ -73,7 +73,7 @@ if (classification=="弁当" || classification=="丼"){
 
 // 高菜の洗濯をしてもらうチェックボックス
 if (classification=="弁当"){
-    res += "<ul><li><input type='checkbox' name='takana' id='takana'><label for='takana'>高菜トッピング : 50円</label>";
+    res += "<h2>ご飯へのトッピング</h2><ul><li><input type='checkbox' name='takana' id='takana'><label for='takana'>高菜トッピング : 50円</label>";
     res += "<div class='check'></div></li></ul>";
 }
 res += "</div>"
