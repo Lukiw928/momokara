@@ -77,3 +77,39 @@ header h1{
 	background: #EC407A;
 	color: #fff;
 }
+
+@media screen and (max-width: 2000px) {
+    #table{
+        margin: 0.5rem 20%;
+    }
+    .table{
+        font-size: 1.2rem;
+    }
+    #table h2{
+        font-size: 2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #table{
+        margin: 0.5rem 10%;
+    }
+    .table{
+        font-size: 1rem;
+    }
+    #table h2{
+        font-size: 1.7rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #table{
+        margin: 0.5rem;
+    }
+    .table{
+        font-size: 0.8rem;
+    }
+    #table h2{
+        font-size: 1.5rem;
+    }
+}
