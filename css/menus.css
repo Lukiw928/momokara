@@ -78,3 +78,36 @@ img{
     font-size: 0.5rem;
     text-align: center;
 }
+
+@media screen and (max-width: 2000px) {
+    .item_image img{
+      width: 40%;
+    }
+    .item{
+        width: calc(100% / 4 - 1rem);
+    }
+    .item_title h2{
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    .item_image img{
+      width: 60%;
+    }
+    .item{
+        width: calc(100% / 2 - 1rem);
+    }
+    .item_title h2{
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .item_image img{
+      width: 70%;
+    }
+    .item_title h2{
+        font-size: 0.5rem;
+    }
+}
