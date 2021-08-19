@@ -55,7 +55,7 @@ for (var i=0; i < itemData.length; i++){
 
     // 写真と商品名を書き込む
     res += "<div class='item_img'>";
-    res += "<img src='img/cooking/"+file_path+"/"+i+".png'>";
+    res += "<img src='img/cooking/"+file_path+"/"+itemData[i]["image_index"]+".png'>";
     res += "</div>";
     res += "<div class='item_title'>";
     res += "<h2>"+itemData[i]["name"]+"</h2>";
