@@ -44,7 +44,7 @@ if (classification=="おにぎり" || menu=="おにぎり"){
     res += "<img src='img/cooking/"+file_path+"/"+data["image_index"]+".png'>";
     res += "</div>";
     
-    res += "<div class='container'><h2>弁当のサイズ</h2><ul>";
+    res += "<div class='container'><h2>サイズ</h2><ul>";
     
     // サイズを選択してもらうチェックボックス
     for (let [size,price] of Object.entries(data["price"])){
