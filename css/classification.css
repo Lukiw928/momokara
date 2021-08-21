@@ -105,6 +105,28 @@ header .order_form .order_form_icon img {
     font-size: 1.3rem;
 }
 
+.go_cart{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.go_cart a{
+    margin: 0.5rem 5rem;
+    font-size: 1rem;
+	padding: 0.6em 1.5rem;
+	text-align: center;
+	text-decoration: none;
+	color: #EC407A;
+	border: 2px solid #EC407A;
+	border-radius: 2rem;
+	transition: .4s;
+}
+.go_cart a:hover {
+	background: #EC407A;
+	color: #fff;
+}
+
 @media screen and (max-width: 768px) {
     .item_wrapper .item_list .item {
       width: calc(100% / 2 - 1rem);
