@@ -73,7 +73,10 @@ if (classification=="弁当" || classification=="丼"){
 
 // 高菜の洗濯をしてもらうチェックボックス
 if (classification=="弁当"){
-    res += "<h2>ご飯へのトッピング</h2><ul><li><input type='checkbox' name='takana' id='takana'><label for='takana'>高菜トッピング : 50円</label>";
+    res += "<h2>ご飯へのトッピング</h2><ul>"
+    res += "<li><input type='radio' name='topping' id='高菜トッピング' onclick=add_topping(this.id)><label for='高菜トッピング'>高菜トッピング : 50円</label>";
+    res += "<div class='check'></div></li>";
+    res += "<li><input type='radio' name='topping' id='昆布トッピング' onclick=add_topping(this.id)><label for='昆布トッピング'>昆布トッピング : 50円</label>";
     res += "<div class='check'></div></li></ul>";
 }
 res += "</div>"
