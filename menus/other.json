@@ -65,6 +65,11 @@
                 "特大390g":250
             },
             "image_index":10
+        },
+        {
+            "name":"おにぎり",
+            "price":130,
+            "image_index":11
         }
     ]
 }
