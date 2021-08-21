@@ -31,7 +31,7 @@ if (classification=="おにぎり"){
 var res = "";
 
 // 種別がおにぎりの時用の画面
-if (classification=="おにぎり"){
+if (classification=="おにぎり" || menu=="おにぎり"){
     res += "<div class='container'><ul>";
     for (var i=0; i<4; i++){
         res += "<li><input type='radio' name='rice_ball' id="+rice_ball[i]+" onclick=add_rice_ball(this.id)><label for="+rice_ball[i]+">"+rice_ball[i]+"</label>";
@@ -112,19 +112,23 @@ function add_rice_ball(getId){
     console.log(getId);
 }
 
+// トッピングをセット
+function add_topping(getId){
+    localStorage.setItem("topping",getId)
+}
+
 // 弁当用の遷移関数
 function to_decision_bento(){
-    let takana = document.getElementsByName("takana");
+    let topping_type = document.getElementsByName("topping");
+    var topping = false
     let rice_data = document.getElementsByName("rice");
     var calculation = 0;
 
     // 高菜がチェックされているか
-    if (takana.item(0).checked){
-        localStorage.setItem("takana",true)
-        takana = true
-    }else{
-        localStorage.setItem("takana",false)
-        takana = false
+    for (var i=0; i<2; i++){
+        if (topping_type.item(i).checked){
+            topping = true
+        }
     }
 
     // 追加
@@ -135,7 +139,7 @@ function to_decision_bento(){
             go = true
         }
     }
-    if (rice_data.item(0).checked && takana){
+    if (rice_data.item(0).checked && topping){
         alert("ご飯無しでは高菜トッピングはできません。")
     }
     else if (!go){
@@ -146,8 +150,8 @@ function to_decision_bento(){
         calculation += data["price"][localStorage.getItem("size")]
         transmit.push("+ ご飯"+localStorage.getItem("rice"))
         calculation += rice[localStorage.getItem("rice")]
-        if (takana){
-            transmit.push("+ 高菜トッピング")
+        if (topping){
+            transmit.push("+ "+localStorage.getItem("topping"))
             calculation += 50
         }
         // console.log(calculation)
@@ -160,7 +164,7 @@ function to_decision_bento(){
 
 // 弁当以外の遷移関数
 function to_decision(){
-    if (classification=="おにぎり"){
+    if (menu=="おにぎり" || classification=="おにぎり"){
         var summary = JSON.parse(localStorage.getItem("summary"))
         summary.push(localStorage.getItem("rice_ball"))
         localStorage.setItem("summary",JSON.stringify(summary))
