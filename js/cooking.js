@@ -44,7 +44,7 @@ for (var i=0; i < itemData.length; i++){
 
     // 種別によって遷移するページを変更
     if (classification=="単品揚げ物" || classification=="お飲み物" || classification=="その他単品"){
-        if (itemData[i].name=="たこ焼き" || itemData[i].name=="フライドポテト" || itemData[i].name=="ご飯"){
+        if (itemData[i].name=="たこ焼き" || itemData[i].name=="フライドポテト" || itemData[i].name=="ご飯" || itemData[i].name== "おにぎり"){
             res += "<a href='details.html'></a>";
         }else{
             res += "<a href='decision.html'></a>";
@@ -79,9 +79,8 @@ function clicked(getId) {
     if (classification=="単品揚げ物" || classification== "お飲み物" || classification=="その他単品"){
         var transmit = [menu]
         localStorage.setItem("summary",JSON.stringify(transmit))
-    }else{
-        localStorage.setItem("menu_name",menu);
     }
+    localStorage.setItem("menu_name",menu);
 
     // 取得した商品名のデータをまるまる登録...Pythonの辞書型のようにO(1)で求めたかったのですが、難航。改善の余地あり
     for (var i=0; i<itemData.length; i++){
