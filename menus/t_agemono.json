@@ -42,12 +42,12 @@
             "id":6,
             "image_index":6
         },
-        {
-            "name":"春巻き",
-            "price":100,
-            "id":7,
-            "image_index":7
-        },
+        //{
+            //"name":"春巻き",
+            //"price":100,
+            //"id":7,
+           // "image_index":7
+        //},
         {
             "name":"チキンカツ",
             "price":180,
