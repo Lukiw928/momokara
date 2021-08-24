@@ -1,11 +1,6 @@
 {
     "menu":[
         {
-            "name":"たい焼き",
-            "price":80,
-            "image_index":0
-        },
-        {
             "name":"焼き鳥",
             "price":150,
             "image_index":1
