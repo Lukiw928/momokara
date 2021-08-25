@@ -18,8 +18,8 @@ let rice = {
 var res = "";
 
 // 種別によって戻る画面を変更
-if (classification=="弁当" || classification == "丼" || classification=="単品唐揚げ" || classification=="その他単品" || classification=="おにぎり" || data.name=="おにぎり"){
-    if ((data.name!="たこ焼き" && data.name!="フライドポテト" && data.name!="ご飯") && classification=="その他単品"){
+if (classification=="弁当" || classification == "丼" || classification=="単品唐揚げ" || classification=="その他単品" || classification=="おにぎり"){
+    if ((data.name!="たこ焼き" && data.name!="フライドポテト" && data.name!="ご飯" && data.name!="おにぎり") && classification=="その他単品"){
         var back = "<a class='to_back_btn' href='cooking.html'>戻る</a>";
     }else{
         var back = "<a class='to_back_btn' href='details.html'>戻る</a>";
