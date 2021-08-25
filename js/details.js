@@ -94,7 +94,7 @@ res += "</div>"
 $(document).ready(function(){
     localStorage.setItem("rice","普通")
     localStorage.setItem("size",null)
-    localStorage.setItem("rice_ball",null)
+    localStorage.setItem("rice_ball","-1")
     $("header").html(back)
     $("#description").html(res)
 })
@@ -170,7 +170,7 @@ function to_decision_bento(){
 function to_decision(){
     if (menu=="おにぎり" || classification=="おにぎり"){
         var summary = JSON.parse(localStorage.getItem("summary"))
-        if (!localStorage.getItem("rice_ball")){
+        if (localStorage.getItem("rice_ball")=="-1"){
             alert("具を選択してください")
         }else{ 
             summary.push(localStorage.getItem("rice_ball"))
