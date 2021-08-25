@@ -172,11 +172,11 @@ function to_decision(){
         var summary = JSON.parse(localStorage.getItem("summary"))
         if (!localStorage.getItem("rice_ball")){
             alert("具を選択してください")
-            continue
+        }else{ 
+            summary.push(localStorage.getItem("rice_ball"))
+            localStorage.setItem("summary",JSON.stringify(summary))
+            window.location.href = "decision.html";
         }
-        summary.push(localStorage.getItem("rice_ball"))
-        localStorage.setItem("summary",JSON.stringify(summary))
-        window.location.href = "decision.html";
     }else{
         let size = document.getElementsByName("size");
         var go = false;
