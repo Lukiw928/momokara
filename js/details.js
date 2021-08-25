@@ -169,12 +169,14 @@ function to_decision_bento(){
 // 弁当以外の遷移関数
 function to_decision(){
     if (menu=="おにぎり" || classification=="おにぎり"){
-        var summary = JSON.parse(localStorage.getItem("summary"))
         if (localStorage.getItem("rice_ball")=="-1"){
             alert("具を選択してください")
         }else{ 
-            summary.push(localStorage.getItem("rice_ball"))
-            localStorage.setItem("summary",JSON.stringify(summary))
+            var transmit = []
+            transmit.push(menu)
+            transmit.push(localStorage.getItem("rice_ball"))
+            localStorage.setItem("summary",null)
+            localStorage.setItem("summary",JSON.stringify(transmit))
             window.location.href = "decision.html";
         }
     }else{
