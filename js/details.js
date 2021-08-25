@@ -169,6 +169,9 @@ function to_decision_bento(){
 function to_decision(){
     if (menu=="おにぎり" || classification=="おにぎり"){
         var summary = JSON.parse(localStorage.getItem("summary"))
+        if (localStorage.getItem("rice_ball") === null){
+            alert("具を選択してください")
+        }
         summary.push(localStorage.getItem("rice_ball"))
         localStorage.setItem("summary",JSON.stringify(summary))
         window.location.href = "decision.html";
