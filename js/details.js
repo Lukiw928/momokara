@@ -173,7 +173,7 @@ function to_decision(){
             alert("具を選択してください")
         }else{ 
             var transmit = []
-            transmit.push(menu)
+            transmit.push(data["name"])
             transmit.push(localStorage.getItem("rice_ball"))
             localStorage.setItem("summary",null)
             localStorage.setItem("summary",JSON.stringify(transmit))
