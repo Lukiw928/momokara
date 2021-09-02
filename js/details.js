@@ -128,7 +128,7 @@ function to_decision_bento(){
     let rice_data = document.getElementsByName("rice");
     var calculation = 0;
 
-    // 高菜がチェックされているか
+    // トッピングがチェックされているか
     for (var i=0; i<2; i++){
         if (topping_type.item(i).checked){
             topping = true
@@ -144,7 +144,7 @@ function to_decision_bento(){
         }
     }
     if (rice_data.item(0).checked && topping){
-        alert("ご飯無しでは高菜トッピングはできません。")
+        alert("ご飯無しでトッピングはできません。")
     }
     else if (!go){
         alert("お弁当のサイズを選択してください")
